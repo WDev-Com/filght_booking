@@ -28,17 +28,17 @@ hs_err_pid*
 # BlueJ files
 *.ctxt
 
-### Maven ###
-target/
-!.mvn/wrapper/maven-wrapper.jar
-**/target/
+# ### Maven ###
+# target/
+# !.mvn/wrapper/maven-wrapper.jar
+# **/target/
 
 # Build helpers
 .mvn/timing.properties
 
-# Maven build logs
-mvnw
-mvnw.cmd
+# # Maven build logs
+# mvnw
+# mvnw.cmd
 
 ### Gradle ###
 .gradle/
