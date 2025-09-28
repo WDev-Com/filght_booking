@@ -1,11 +1,21 @@
-# Use a base image with Java runtime
-FROM openjdk:17-jdk-slim as builder
-
-# Set working directory
+# 1️⃣ Build Stage
+FROM maven:3.9.6-eclipse-temurin-17 as builder
 WORKDIR /app
 
-# Copy build artifacts (replace with your JAR path if different)
-COPY target/*.jar app.jar
+# Copy pom.xml first (for dependency caching)
+COPY pom.xml .
+RUN mvn dependency:go-offline
+
+# Copy source code and build
+COPY src ./src
+RUN mvn clean package -DskipTests
+
+# 2️⃣ Runtime Stage
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+
+# Copy built JAR from builder stage
+COPY --from=builder /app/target/*.jar app.jar
 
 # Run the jar file
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
