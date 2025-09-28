@@ -1,0 +1,97 @@
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.rej
+*.swp
+
+# Compiled class file
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
+
+# BlueJ files
+*.ctxt
+
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+**/target/
+
+# Build helpers
+.mvn/timing.properties
+
+# Maven build logs
+mvnw
+mvnw.cmd
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradlew
+gradlew.bat
+
+# Gradle cache
+**/build/
+!**/src/**/build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+out/
+.idea_modules/
+
+# User-specific stuff
+*.ipr
+*.iws
+
+### Eclipse ###
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.metadata/
+
+### VS Code ###
+.vscode/
+
+### Logs ###
+logs/
+*.log
+*.tmp
+
+### OS generated files ###
+.DS_Store
+Thumbs.db
+
+### Environment files ###
+.env
+.env.*
+
+### Spring Boot ###
+# If you're using Spring Boot DevTools
+spring-boot-devtools.jar
+
+# Static resource files
+/static/**/target/
+
+# Temporary files
+tmp/
